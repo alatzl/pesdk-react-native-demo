@@ -17,6 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+  [PESDK setBundleImageBlock:^UIImage * _Nullable(NSString * _Nonnull imageName) {
+    if ([imageName isEqualToString:@"imgly_icon_save"]) {
+      // Code gets in here, but the save image is never replaced in-app.
+      return [UIImage imageNamed:@"imgly_icon_cancel_44pt"];
+    }
+
+    return nil;
+  }];
+
   // Configure and customize PhotoEditor SDK beyond the configuration options exposed to JavaScript
   RNPhotoEditorSDK.configureWithBuilder = ^(PESDKConfigurationBuilder * _Nonnull builder) {
     // Disable the color pipette for the text color selection tool
@@ -26,6 +36,7 @@
       options.availableColors = colors;
     }];
   };
+
   RNPhotoEditorSDK.willPresentPhotoEditViewController = ^(PESDKPhotoEditViewController * _Nonnull photoEditViewController) {
     NSLog(@"willPresent: %@", photoEditViewController);
   };
