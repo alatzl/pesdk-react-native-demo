@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+  // BEGIN Changes to reproduce issue PEHELP-2317
   [PESDK setBundleImageBlock:^UIImage * _Nullable(NSString * _Nonnull imageName) {
     if ([imageName isEqualToString:@"imgly_icon_save"]) {
       // Code gets in here, but the save image is never replaced in-app.
@@ -26,6 +26,7 @@
 
     return nil;
   }];
+  // END Changes to reproduce issue PEHELP-2317
 
   // Configure and customize PhotoEditor SDK beyond the configuration options exposed to JavaScript
   RNPhotoEditorSDK.configureWithBuilder = ^(PESDKConfigurationBuilder * _Nonnull builder) {
