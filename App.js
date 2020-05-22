@@ -60,12 +60,39 @@ const App: () => React$Node = () => {
           ]},
           // Use existing sticker category
           { identifier: "imgly_sticker_category_emoticons" },
-          // Modify existing sticker category 
+          // Modify existing sticker category
           { identifier: "imgly_sticker_category_shapes", items: [
             { identifier: "imgly_sticker_shapes_badge_01" },
             { identifier: "imgly_sticker_shapes_arrow_02" },
             { identifier: "imgly_sticker_shapes_spray_03" },
           ]},
+        ]
+      },
+      text: {
+        fonts: [
+          { identifier: 'imgly_font_ostrich_sans_black' },
+          { identifier: 'imgly_font_ostrich_sans_bold' },
+          { identifier: 'imgly_font_panton_blackitalic_caps' },
+          { identifier: 'imgly_font_panton_lightitalic_caps' },
+          {
+            identifier: 'custom-bogle',
+            fontFamily: 'Bogle-Regular',
+            fontWeight: '400',
+            textMetrics: {
+              unitsPerEm: 1000,
+              ascender: 1067,
+              descender: -323
+            },
+            fontURI: './fonts', // omitting this property, or using '..' as in the example, has no effect
+            format: 'otf',
+            provider: 'file'
+          },
+          {
+            identifier: 'google-roboto',
+            fontFamily: 'Roboto',
+            fontWeight: '400',
+            provider: 'google'
+          }
         ]
       }
     };
@@ -146,11 +173,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
+    fontFamily: 'Bogle-Regular',
     fontSize: 24,
     fontWeight: '600',
     color: Colors.black,
   },
   sectionDescription: {
+    fontFamily: 'Bogle-Regular',
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
@@ -162,6 +191,7 @@ const styles = StyleSheet.create({
   footer: {
     color: Colors.dark,
     fontSize: 12,
+    fontFamily: 'Bogle-Regular',
     fontWeight: '600',
     padding: 4,
     paddingRight: 12,

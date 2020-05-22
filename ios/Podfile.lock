@@ -19,9 +19,9 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - imglyKit (10.9.0)
-  - PhotoEditorSDK (10.9.0):
-    - imglyKit (= 10.9.0)
+  - imglyKit (10.10.0)
+  - PhotoEditorSDK (10.10.0):
+    - imglyKit (= 10.10.0)
   - RCTRequired (0.61.5)
   - RCTTypeSafety (0.61.5):
     - FBLazyVector (= 0.61.5)
@@ -324,8 +324,8 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  imglyKit: 51cd1802ad680a5531db09f3616c1ace157da9f1
-  PhotoEditorSDK: 152d36340b1c4ddc8ad676e89eaa84e3fca26d8f
+  imglyKit: 1d6f241c25c6f673d32661955c5829d84e228e05
+  PhotoEditorSDK: 9f98884121c8d77af6a316f0c070ba4d94ea78b6
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
   RCTTypeSafety: 9aa1b91d7f9310fc6eadc3cf95126ffe818af320
   React: b6a59ef847b2b40bb6e0180a97d0ca716969ac78
