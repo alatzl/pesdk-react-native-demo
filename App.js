@@ -34,12 +34,12 @@ import {
 // Uncomment the following line to unlock PhotoEditor SDK with a license file
 // PESDK.unlockWithLicense(require('./pesdk_license'));
 
-const App: () => React$Node = () => {
+const App = () => {
   const openEditor = () => {
     // Set up sample image
     let image = require('./assets/LA.jpg');
     // Set up configuration
-    let configuration: Configuration = {
+    let configuration = {
       // Configure sticker tool
       sticker: {
         // Enable personal stickers
