@@ -36,7 +36,7 @@ yarn react-native run-android
 ## Unlock the SDK
 
 PhotoEditor SDK is a product of img.ly GmbH. Without unlocking, the SDK is fully functional but a watermark is added on top of the image preview and any exported images.
-In order to remove the watermark and to use PhotoEditor SDK within your app **you'll need to [request a license](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=PESDK&utm_content=React-Native-Demo) and load a license file** in your [`App.js`](./App.js#L34-L35) with:
+In order to remove the watermark and to use PhotoEditor SDK within your app **you'll need to [request a license](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=PESDK&utm_content=React-Native-Demo) for each platform and load the license file(s)** in your [`App.js`](./App.js#L30-L36) with the following single line of code that automatically resolves multiple license files via [platform-specific file extensions](https://reactnative.dev/docs/platform-specific-code#platform-specific-extensions):
 
 ```js
 PESDK.unlockWithLicense(require('./pesdk_license'));
@@ -46,7 +46,7 @@ PESDK.unlockWithLicense(require('./pesdk_license'));
 
 The React Native module for PhotoEditor SDK includes a rich set of most commonly used [configuration and customization options](https://github.com/imgly/pesdk-react-native/blob/master/configuration.ts) of PhotoEditor SDK for iOS and Android. The native frameworks provide **fully customizable** photo editors. Please refer to [our documentation](https://docs.photoeditorsdk.com/?utm_campaign=Projects&utm_source=Github&utm_medium=PESDK&utm_content=React-Native-Demo) for more details.
 
-Native customization for iOS is demonstrated in the [`AppDelegate`](./ios/PESDKExample/AppDelegate.m#L20-L31) of the example application.
+Native customization for iOS is demonstrated in the [`AppDelegate`](./ios/PESDKExample/AppDelegate.m#L36-L47) of the example application.
 
 ## License Terms
 
